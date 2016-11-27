@@ -1,15 +1,3 @@
-<?php
-if (isset($_GET["inscription"])){
-if($_GET["inscription"]=="ok"){
-?>
-<div id="inscription_ok">inscription réussie, un mail vous a été envoyé pour confirmer votre inscription</div>
-<?php
-}
-}
-?>
-
-
-
 <div id="erreur_confirmation">Erreur, vous devez confirmer votre mail</div>
 <div id="erreur_login">Erreur, mot de passe ou mail incorrect</div>
 
@@ -23,5 +11,5 @@ if($_GET["inscription"]=="ok"){
 </form>
 
 <a href="form-inscription.php">Pas encore inscris?</a>
-<script type="text/javascript" src="../ressources/script/jquery.js"></script> 
-<script type="text/javascript" src="../controleur/script-login.js"></script> 
+<script type="text/javascript" src="ressources/script/jquery.js"></script> 
+<script type="text/javascript" src="controleur/script-login.js"></script> 

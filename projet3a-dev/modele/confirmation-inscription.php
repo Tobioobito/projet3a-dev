@@ -39,7 +39,7 @@ if(isset($_GET['mail'], $_GET['cle']) AND !empty($_GET['mail']) AND !empty($_GET
 }
 
 
-header('Location: ../vue/accueil.php');
+header('Location: ../accueil.php');
 
 
 

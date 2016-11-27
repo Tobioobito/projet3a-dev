@@ -16,7 +16,7 @@ $( "#erreur_confirmation" )
 
 function login(){
 
-$.post("/projet3a-dev/modele/login.php", { 
+$.post("modele/login.php", { 
 							
                             mdp_login : $("#mdp_login").val(),
                             mail_login : $("#mail_login").val() } ,

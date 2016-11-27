@@ -50,6 +50,6 @@
 	<input id="bouton_inscription" type="submit" name=""><br>
 </form>
 
-<script type="text/javascript" src="../ressources/script/jquery.js"></script> 
-<script type="text/javascript" src="../controleur/script-inscription.js"></script> 
+<script type="text/javascript" src="ressources/script/jquery.js"></script> 
+<script type="text/javascript" src="controleur/script-inscription.js"></script> 
 

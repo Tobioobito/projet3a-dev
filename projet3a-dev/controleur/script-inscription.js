@@ -18,7 +18,7 @@ $( "#erreur_mdp" )
 
 function inscription(){
 
-$.post("/projet3a-dev/modele/inscription.php", { 
+$.post("modele/inscription.php", { 
 							mail_master : $("#mail_master").val(), 
                             mdp_master : $("#mdp_master").val(), 
                             nom_master : $("#nom_master").val(),
