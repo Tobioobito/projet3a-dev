@@ -1,5 +1,14 @@
 <?php
-session_start();
+
+
+if(!isset($_SESSION)) 
+{ 
+   session_start(); 
+ } 
+
+
+
+
 
 $dns='mysql:host=localhost;dbname=sl';
 $utilisateur = 'root';
