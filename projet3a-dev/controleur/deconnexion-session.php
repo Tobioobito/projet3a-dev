@@ -3,5 +3,5 @@
 session_start();
 session_destroy();
 
-header('Location: ../vue/form-login.php');
+header('Location: ../form-login.php');
 ?>
