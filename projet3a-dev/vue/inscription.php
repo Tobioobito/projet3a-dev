@@ -50,6 +50,8 @@
 	<input id="bouton_inscription" type="submit" name=""><br>
 </form>
 
+<a href="login.php">Se connecter</a>
+
 <script type="text/javascript" src="ressources/script/jquery.js"></script> 
 <script type="text/javascript" src="controleur/script-inscription.js"></script> 
 

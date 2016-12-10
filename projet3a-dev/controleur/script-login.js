@@ -19,15 +19,18 @@ function login(){
 $.post("modele/login.php", { 
 							
                             mdp_login : $("#mdp_login").val(),
-                            mail_login : $("#mail_login").val() } ,
-    function(){
+                            mail_login : $("#mail_login").val()
+                            } ,
+    function(data){
 
 
+if (data=="erreur"){
 
 
-window.location.replace("accueil.php");
+    $("#erreur_login").slideDown("slow");
+}
 
-
+else window.location.replace("accueil.php");
 }
 
 
@@ -64,4 +67,6 @@ return false;
 else  login();
 
     return false;
+
+
 });

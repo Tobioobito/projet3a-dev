@@ -71,7 +71,7 @@ return false;
 else  inscription();
 
 
-window.location.replace("form-login.php?inscription=ok");
+window.location.replace("login.php?inscription=ok");
     return false;
 });
 

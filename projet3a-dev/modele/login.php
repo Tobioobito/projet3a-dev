@@ -26,6 +26,9 @@ $_SESSION['id_master'] = $userinfo['id_master'];
 $_SESSION['nom_eta_master'] = $userinfo['nom_eta_master'];
 
 
+
+
+
 }
 
 else echo "erreur";

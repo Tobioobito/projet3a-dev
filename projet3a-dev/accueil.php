@@ -9,7 +9,7 @@ include "vue/accueil.php";
 
 }
 
-else header('Location: form-inscription.php');
+else header('Location: inscription.php');
 
 ?>
 
