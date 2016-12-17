@@ -136,4 +136,4 @@ gestion prof</div><br />
 </table>
 
 <script type="text/javascript" src="ressources/script/jquery.js"></script> 
-<script type="text/javascript" src="controleur/script-ajout-prof.js"></script>
+<script type="text/javascript" src="controleur/script-gestion-prof.js"></script>

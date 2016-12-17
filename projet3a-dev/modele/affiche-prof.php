@@ -18,7 +18,7 @@ echo '<tr>
 	  <td>'.$resultat['matiere_prof1'].'</td>
 	  <td>'.$resultat['classe_prof1'].', '.$resultat['classe_prof2'].', '.$resultat['classe_prof3'].', '.$resultat['classe_prof4'].', '.$resultat['classe_prof5'].', '.$resultat['classe_prof6'].'</td>
 	  <td><a href="">Modifier</a></td>
-	  <td><a href="">Supprimer</a></td>
+	  <td><a href="modele/supprime-prof.php?delete='.$resultat['id_prof'].'">Supprimer</a></td>
 	  </tr>';
 
 }
