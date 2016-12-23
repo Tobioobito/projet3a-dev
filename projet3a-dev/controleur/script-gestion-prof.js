@@ -67,64 +67,69 @@ supprime_prof(this.name);
 
 ///////////////////////////MODIF PROF//////////////////////////
 
-/*
-
-function form_modif_prof(id_p){
 
 
-$.post("modele/affiche-form-modif-prof.php", { 
+function remplir_form_modif(id_p){
+    
 
-                            id_prof : id_p } ,
-    function(){
-  
+$.post("modele/remplir-form-modif-prof.php", {
+                            id_prof      : id_p } ,
+    function(data){
+
+    if (data=="erreur"){
+        alert("erreur");
+}
+/*$('#form_modif_prof').load(document.URL +  ' #form_modif_prof');*/
+
+else 
+    $("#form_modif_prof").html(data);
 
 });
+
+
 
 }
 
 
 
+ $('.affiche_modif_prof').click (function( event ) { 
 
 
+remplir_form_modif(this.name);
 
-
-        $('.affiche_modif_prof').click (function( event ) { 
-
-            var nom_prof_modif = 
-            var prenom_prof_modif =
-            var nom_prof_modif =
-            var nom_prof_modif =
-            var nom_prof_modif =
-            var nom_prof_modif =
-            var nom_prof_modif =
-            var nom_prof_modif =
-            var nom_prof_modif =
-            var nom_prof_modif =
-
-
-            $("#nom_prof_modif").val("nom");
-            $("#prenom_prof_modif").val("bro");
-            $("#mdp_prof_modif").val("bro");
-            $("#mdp_check_prof_modif").val("bro");
-            $("#mail_prof_modif").val("bro");
-
-
-            $("#matiere_prof1_modif").val("math");
-            $("#matiere_prof2_modif").val("math");
-            $("#matiere_prof3_modif").val("math");
-
-
-            $("#classe_prof1_modif").val("math");
-            $("#classe_prof2_modif").val("math");
-            $("#classe_prof3_modif").val("math");
-            $("#classe_prof4_modif").val("math");
-            $("#classe_prof5_modif").val("math");
-            $("#classe_prof6_modif").val("math");
-
-   
- $("#form_modif_prof").slideDown("slow");
 return false;
-        });
-    
-    */
+ });
 
+
+function modif_prof(id_p){
+
+
+$.post("modele/modif-prof.php", { 
+                            mail_prof_modif : $("#mail_prof_modif").val(), 
+                            mdp_prof_modif : $("#mdp_prof_modif").val(), 
+                            nom_prof_modif : $("#nom_prof_modif").val(),
+                            prenom_prof_modif : $("#prenom_prof_modif").val(),
+                            
+                            matiere_prof1_modif : $("#matiere_prof1_modif").val(),
+                            matiere_prof2_modif : $("#matiere_prof2_modif").val(),
+                            matiere_prof3_modif : $("#matiere_prof3_modif").val(),
+                            id_prof      : id_p } ,
+    function(){
+
+            $('#tableau_prof').load(document.URL +  ' #tableau_prof');
+alert(id_p);
+
+
+});
+
+return false;
+}
+
+
+$('#form_modif_prof').on ("click", '#bouton_modif_prof',  function() { 
+
+
+modif_prof(this.name);
+
+return false;
+});

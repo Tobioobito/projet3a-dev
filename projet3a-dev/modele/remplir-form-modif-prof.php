@@ -2,25 +2,31 @@
 
 include ("connect-bdd.php");
 
-$id_prof = $_POST['id_prof'];
+
+if (isset($_POST["id_prof"])){
+$id_prof = $_POST["id_prof"];
+
 
 $requete = $connexion->prepare('SELECT * FROM sl_prof WHERE id_prof = :id_prof');
 $requete->bindParam(':id_prof', $id_prof, PDO::PARAM_INT);
+
 $requete->execute();
 
 
 $userexist =$requete->rowCount();
 if($userexist == 1)
 
+
 {
 
 $modif = $requete->fetch();
 
+
 ?>
-<div id="form_modif_prof">
+
 <h2>Modifier ce professeur</h2>
-<form method="POST" action="modif-prof.php">
-<input id="nom_prof_modif" type="text" name="id_prof" placeholder="Nom du professeur" value=<?php echo $id_prof; ?>><br>
+<form method="POST">
+
 	<input id="nom_prof_modif" type="text" name="nom_prof_modif" placeholder="Nom du professeur" value=<?php echo $modif["nom_prof"]; ?>><br>
 	<input id="prenom_prof_modif" type="text" name="prenom_prof_modif" placeholder="Prénom du professeur" value=<?php echo $modif["prenom_prof"]; ?>><br>
 	<input id="mdp_prof_modif" type="password" name="mdp_prof_modif" placeholder="Mot de passe du professeur" value=<?php echo $modif["mdp_prof"]; ?>><br>
@@ -110,18 +116,19 @@ $modif = $requete->fetch();
 
 	<br>
 
-	<input id="bouton_modif_prof" type="submit" name="bouton_modif_prof">
+	<input id="bouton_modif_prof" type="submit" name=<?php echo $modif["id_prof"]; ?>>
 
 
 
 
 </form>
 
-</div>
 
 <?php
 
+
 }
+
 
 
 else {
@@ -129,5 +136,5 @@ else {
 echo"erreur";
 
 }
-
+}
 ?>
