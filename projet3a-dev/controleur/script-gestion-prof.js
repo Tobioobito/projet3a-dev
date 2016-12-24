@@ -117,7 +117,7 @@ $.post("modele/modif-prof.php", {
     function(){
 
             $('#tableau_prof').load(document.URL +  ' #tableau_prof');
-alert(id_p);
+
 
 
 });

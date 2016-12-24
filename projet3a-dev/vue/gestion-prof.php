@@ -126,7 +126,7 @@ include "modele/remplir-form-modif-prof.php";
 
 		<th>Modifier un professeur</th>
 		<th>Supprimer un professeur</th>
-	<th class="id_prof">Id</th>
+	
 	</tr>
 
 
