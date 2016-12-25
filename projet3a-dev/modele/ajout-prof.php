@@ -13,25 +13,25 @@ include "connect-bdd.php";
 	$matiere_prof1   =  $_POST["matiere_prof1"];
 	$matiere_prof2   =  $_POST["matiere_prof2"];
 	$matiere_prof3   =  $_POST["matiere_prof3"];
+
+	$matiere_prof    = $matiere_prof1.', '.$matiere_prof2.','.$matiere_prof3;
 	$eta_prof        =  $_SESSION['nom_eta_master'];
 
 
 
 
 
-$requete = $connexion->prepare("INSERT INTO sl_prof (mail_prof, mdp_prof, nom_prof, prenom_prof, matiere_prof1, matiere_prof2, matiere_prof3, eta_prof)
+$requete = $connexion->prepare("INSERT INTO sl_prof (mail_prof, mdp_prof, nom_prof, prenom_prof, matiere_prof, eta_prof)
 
 
-													   VALUES (:mail_prof, :mdp_prof, :nom_prof, :prenom_prof, :matiere_prof1, :matiere_prof2, :matiere_prof3, :eta_prof)");
+													   VALUES (:mail_prof, :mdp_prof, :nom_prof, :prenom_prof, :matiere_prof, :eta_prof)");
 
 
 $requete->bindParam(':mail_prof', $mail_prof, PDO::PARAM_STR);
 $requete->bindParam(':mdp_prof', $mdp_prof, PDO::PARAM_STR);
 $requete->bindParam(':nom_prof', $nom_prof, PDO::PARAM_STR);
 $requete->bindParam(':prenom_prof', $prenom_prof, PDO::PARAM_STR);
-$requete->bindParam(':matiere_prof1', $matiere_prof1, PDO::PARAM_STR);
-$requete->bindParam(':matiere_prof2', $matiere_prof2, PDO::PARAM_STR);
-$requete->bindParam(':matiere_prof3', $matiere_prof3, PDO::PARAM_STR);
+$requete->bindParam(':matiere_prof', $matiere_prof, PDO::PARAM_STR);
 $requete->bindParam(':eta_prof', $eta_prof, PDO::PARAM_STR);
 
 $requete->execute();

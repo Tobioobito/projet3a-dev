@@ -2,8 +2,8 @@
 	  <tr>
 	  <td>'.$resultat['nom_prof']. '</td> 
 	  <td>'.$resultat['prenom_prof'].'</td> 
-	  <td>'.$resultat['matiere_prof1'].', '.$resultat['matiere_prof2'].', '.$resultat['matiere_prof3'].'</td>
-	  <td>'.$resultat['classe_prof1'].', '.$resultat['classe_prof2'].', '.$resultat['classe_prof3'].', '.$resultat['classe_prof4'].', '.$resultat['classe_prof5'].', '.$resultat['classe_prof6'].'</td>
+	  <td>'.$resultat['matiere_prof'].'</td>
+	  <td>'.$resultat['classe_prof'].'</td>
 	  
 	 
 	  

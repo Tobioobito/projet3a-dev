@@ -9,7 +9,7 @@ gestion prof</div><br />
 
 <div id="form_ajout_prof">
 <h2>Ajouter un professeur</h2>
-<form method="POST">
+<form method="POST" action="modele/ajout-prof.php">
 
 	<input id="nom_prof" type="text" name="nom_prof" placeholder="Nom du professeur"><br>
 	<input id="prenom_prof" type="text" name="prenom_prof" placeholder="Prénom du professeur"><br>
@@ -20,12 +20,14 @@ gestion prof</div><br />
 	Définir les matières (créer les matières ici) : <br>
 
 	<select id="matiere_prof1" type="text" name="matiere_prof1">
+		<option></option>
 		<option>français</option>
 		<option>math</option>
 		<option>histoire</option>
 	</select>
 
 	<select id="matiere_prof2" type="text" name="matiere_prof2">
+	<option></option>
 	<option>français</option>
 	<option>math</option>
 	<option>histoire</option>
@@ -33,6 +35,7 @@ gestion prof</div><br />
 	</select>
 
 	<select id="matiere_prof3" type="text" name="matiere_prof3">
+	<option></option>
 	<option>français</option>
 	<option>math</option>
 	<option>histoire</option>
