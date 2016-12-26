@@ -1,3 +1,46 @@
+////////////////////////SELECTION MATIERES (récursivité)/////////////////////
+
+affiche_select_matiere(1);
+var total_matiere = '';
+function affiche_select_matiere(nbr_matiere){
+
+  
+    var matiere_prof = "matiere_prof"+nbr_matiere;
+    var select_matiere="<select type='text' id="+matiere_prof+" name="+matiere_prof+"><option></option><option>français</option><option>math</option><option>histoire</option></select>";
+
+    $("#select_matiere").append(select_matiere);
+
+    $( "#"+matiere_prof ).on( "change",  function() {
+
+        if($('select').val() !== ""){
+
+        total_matiere = total_matiere +", "+ $("#"+matiere_prof).val();
+        $("#total_matiere").val(total_matiere);
+        affiche_select_matiere(nbr_matiere+1);
+
+    }
+
+     else refresh_select();
+
+    });
+ 
+
+
+
+
+}
+
+
+function refresh_select(){
+
+
+
+
+    
+}
+
+
+
 //////////////////////////////AJOUT PROF ////////////////////////////////
 
 $("#bouton_ajout_prof").click(function( event ) {
@@ -15,9 +58,7 @@ $.post("modele/ajout-prof.php", {
                             mdp_prof : $("#mdp_prof").val(), 
                             nom_prof : $("#nom_prof").val(),
                             prenom_prof : $("#prenom_prof").val(),
-                            matiere_prof1 : $("#matiere_prof1").val(),
-                            matiere_prof2 : $("#matiere_prof2").val(),
-                            matiere_prof3 : $("#matiere_prof3").val() } ,
+                            matiere_prof : total_matiere} ,
     function(){
 
     		$('#tableau_prof').load(document.URL +  ' #tableau_prof');

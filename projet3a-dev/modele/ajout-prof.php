@@ -10,11 +10,7 @@ include "connect-bdd.php";
 	$mdp_prof        =  htmlspecialchars($_POST["mdp_prof"]);
 	$nom_prof        =  htmlspecialchars($_POST["nom_prof"]);
 	$prenom_prof     =  htmlspecialchars($_POST["prenom_prof"]);
-	$matiere_prof1   =  $_POST["matiere_prof1"];
-	$matiere_prof2   =  $_POST["matiere_prof2"];
-	$matiere_prof3   =  $_POST["matiere_prof3"];
-
-	$matiere_prof    = $matiere_prof1.', '.$matiere_prof2.','.$matiere_prof3;
+	$matiere_prof    =  htmlspecialchars($_POST["matiere_prof"]);;
 	$eta_prof        =  $_SESSION['nom_eta_master'];
 
 

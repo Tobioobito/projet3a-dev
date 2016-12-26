@@ -12,27 +12,22 @@ gestion matières
 
 	<input id="nom_matiere" type="text" name="nom_matiere" placeholder="Matière"><br>
 
-<select>
-<option>
+	<select id="prof_matiere" name="prof_matiere">
+		<option>
+		</option>
+		<?php include "modele/remplir-select-prof.php";?>
+	</select><br />
 
-Profs
+	<select id="classe_matiere" name="classe_matiere">
+		<option>
+			Classe
+		</option>
+	</select><br />
 
-</option>
-</select>
-<br />
-
-<select>
-<option>
-
-Classe
-	
-</option>
-</select>
-<br />
-	<input type="submit" name="bouton_ajout_matiere">
+	<input type="submit" id="bouton_ajout_matiere" name="bouton_ajout_matiere">
 
 
-<table>
+<table id="tableau_matiere">
 
 	<tr>
 		<th>Nom matière</th>
@@ -41,4 +36,12 @@ Classe
 		<th>Modifier une matière</th>
 		<th>Supprimer une matière</th>
 	</tr>
+
+	<?php
+	include "modele/affiche-matiere.php";
+	?>
+
 </table>
+
+<script type="text/javascript" src="ressources/script/jquery.js"></script> 
+<script type="text/javascript" src="controleur/script-gestion-matiere.js"></script> 
