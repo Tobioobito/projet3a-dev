@@ -9,6 +9,7 @@ gestion prof</div><br />
 
 <div id="form_ajout_prof">
 <h2>Ajouter un professeur</h2>
+
 <form method="POST">
 
 	<input id="nom_prof" type="text" name="nom_prof" placeholder="Nom du professeur"><br>
@@ -18,10 +19,9 @@ gestion prof</div><br />
 	<input id="mail_prof" type="text" name="mail_prof" placeholder="Mail du professeur"><br>
 
 	Définir les matières (créer les matières ici) : <br>
-
-
+<input id="bouton_matiere_more" type="button" value="+">
+<input id="bouton_matiere_less" type="button" value="-">
 	<div id="select_matiere">
-	
 
 
 
