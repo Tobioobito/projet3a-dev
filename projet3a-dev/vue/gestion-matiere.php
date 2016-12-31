@@ -13,8 +13,6 @@ gestion matières
 	<input id="nom_matiere" type="text" name="nom_matiere" placeholder="Matière"><br>
 
 	<select id="prof_matiere" name="prof_matiere">
-		<option>
-		</option>
 		<?php include "modele/remplir-select-prof.php";?>
 	</select><br />
 

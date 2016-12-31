@@ -21,7 +21,6 @@ if($userexist == 1)
 
 $modif = $requete->fetch();
 
-
 include "../vue/form-modif-prof.php";
 
 

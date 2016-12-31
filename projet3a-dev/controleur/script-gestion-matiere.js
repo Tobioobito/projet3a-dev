@@ -23,3 +23,27 @@ $.post("modele/ajout-matiere.php", {
 
 
 }
+
+////////////////////////SUPPRIME MATIERE/////////////////////////////
+
+function supprime_matiere(id_m){
+
+$.post("modele/supprime-matiere.php", { 
+
+                            id_matiere : id_m } ,
+    function(){
+
+$('#tableau_matiere').load(document.URL +  ' #tableau_matiere');    		
+
+});
+
+}
+
+
+$(".bouton_supprime_matiere").click(function( event ) {
+
+supprime_matiere(this.name);
+
+
+
+});

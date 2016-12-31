@@ -25,11 +25,14 @@ function affiche_select_matiere(nbr_matiere){
     }
 */
 var nbr_matiere = 2;
-$("#select_matiere").append("<select type='text' id='matiere_prof1' name='matiere_prof1' ><option>français</option><option>math</option><option>histoire</option></select>");
+$("#select_matiere").append("<select type='text' id='matiere_prof1' name='matiere_prof1' ></select>");
+$("#matiere_prof1").load("modele/remplir-select-matiere.php");
+
 $( "#bouton_matiere_more" ).on( "click",  function() {
     var matiere_prof = "matiere_prof"+nbr_matiere;
-    var select_matiere="<select type='text' id="+matiere_prof+" name="+matiere_prof+"><option>français</option><option>math</option><option>histoire</option></select>";
+    var select_matiere="<select type='text' id="+matiere_prof+" name="+matiere_prof+">";
     $("#select_matiere").append(select_matiere);
+    $("#matiere_prof"+nbr_matiere).load("modele/remplir-select-matiere.php");
     nbr_matiere=nbr_matiere + 1;
     
 

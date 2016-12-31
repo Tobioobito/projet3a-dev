@@ -1,3 +1,45 @@
+<?php 
+
+
+
+
+
+function tab_option(){
+	global $modif;
+	$tab_matiere = preg_split('/[\s,]+/', $modif["matiere_prof"]);
+	return $tab_matiere;
+}
+
+
+
+function option_matiere(){
+
+global $connexion;
+
+$nom_eta_master=$_SESSION['nom_eta_master'];
+
+
+$req = $connexion->prepare('SELECT * FROM sl_matiere WHERE eta_matiere = :nom_eta_master ORDER BY nom_matiere');
+
+$req->bindParam(':nom_eta_master', $nom_eta_master, PDO::PARAM_STR);
+$req->execute();
+
+$select_chain='<select id="matiere_prof_modif" type="text" name="matiere_prof_modif">';
+
+while($resultat = $req->fetch()){
+			$select_chain=$select_chain.'<option>'.$resultat['nom_matiere'].'</option>';
+		}
+$select_chain=$select_chain.'</select>';
+
+	$tableau_matiere=tab_option(); 
+	foreach ($tableau_matiere as $element){	
+		echo $select_chain;
+	}
+	
+}
+
+?>
+
 <h2>Modifier ce professeur</h2>
 <form method="POST">
 
@@ -9,82 +51,13 @@
 
 	Définir les matières (créer les matières ici) : <br>
 
-	<select id="matiere_prof1_modif" type="text" name="matiere_prof1_modif">
-		<option><?php echo $modif["matiere_prof1"];?></option>
-		<option>français</option>
-		<option>math</option>
-		<option>histoire</option>
-	</select>
 
-	<select id="matiere_prof2_modif" type="text" name="matiere_prof2_modif">
-	<option><?php echo $modif["matiere_prof2"];?></option>
-	<option>français</option>
-	<option>math</option>
-	<option>histoire</option>
-
-	</select>
-
-	<select id="matiere_prof3_modif" type="text" name="matiere_prof3_modif">
-	<option><?php echo $modif["matiere_prof3"];?></option>
-	<option>français</option>
-	<option>math</option>
-	<option>histoire</option>
-	</select><br>
-
-	Définir les classes (créer les classes ici) : <br>
-
-	<select id="classe_prof1_modif" type="text" name="classe_prof1_modif">
-<option><?php echo $modif["classe_prof1"];?></option>	
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-	</select>
-
-	<select id="classe_prof2_modif" type="text" name="classe_prof2_modif">
-<option><?php echo $modif["classe_prof2"];?></option>
-<option>école</option>
-<option>école</option>
-<option>école</option>
+		<?php option_matiere(); ?>
 
 
 
-	</select>
-
-	<select id="classe_prof3_modif" type="text" name="classe_prof3_modif">
-	
-<option><?php echo $modif["classe_prof3"];?></option>
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-
-	</select>
-
-	<select id="classe_prof4_modif" type="text" name="classe_prof4_modif">
-<option><?php echo $modif["classe_prof4"];?></option>	
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-	</select>
-
-	<select id="classe_prof5_modif" type="text" name="classe_prof5_modif">
-<option><?php echo $modif["classe_prof5"];?></option>	
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-
-	</select>
-
-	<select id="classe_prof6_modif" type="text" name="classe_prof6_modif">
-<option><?php echo $modif["classe_prof6"];?></option>	
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-
+	<select id="classe_prof_modif" type="text" name="classe_prof_modif">
+<option><?php echo $modif["classe_prof"];?></option>
 	</select>
 
 

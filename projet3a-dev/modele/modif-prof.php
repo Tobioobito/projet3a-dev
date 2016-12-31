@@ -9,11 +9,7 @@ $mail_prof_modif=$_POST["mail_prof_modif"];
 $mdp_prof_modif=$_POST["mdp_prof_modif"];
 
 
-$matiere_prof1_modif=$_POST["matiere_prof1_modif"];
-$matiere_prof2_modif=$_POST["matiere_prof2_modif"];
-$matiere_prof3_modif=$_POST["matiere_prof3_modif"];
-
-$matiere_prof_modif=$matiere_prof1_modif.', '.$matiere_prof2_modif.', '.$matiere_prof3_modif.;
+$matiere_prof_modif=$_POST["matiere_prof_modif"];
 
 $eta_prof= $_SESSION['nom_eta_master'];
 $id_prof= $_POST['id_prof'];
