@@ -1,10 +1,7 @@
 <?php 
 
 
-
-
-
-function tab_option(){
+function decoupe_bdd_matiere(){
 	global $modif;
 	$tab_matiere = preg_split('/[\s,]+/', $modif["matiere_prof"]);
 	return $tab_matiere;
@@ -12,30 +9,30 @@ function tab_option(){
 
 
 
-function option_matiere(){
+function insert_option_matiere(){
 
-global $connexion;
+	global $connexion;
+	$nom_eta_master=$_SESSION['nom_eta_master'];
+	$req = $connexion->prepare('SELECT * FROM sl_matiere WHERE eta_matiere = :nom_eta_master ORDER BY nom_matiere');
+	$req->bindParam(':nom_eta_master', $nom_eta_master, PDO::PARAM_STR);
 
-$nom_eta_master=$_SESSION['nom_eta_master'];
 
 
-$req = $connexion->prepare('SELECT * FROM sl_matiere WHERE eta_matiere = :nom_eta_master ORDER BY nom_matiere');
-
-$req->bindParam(':nom_eta_master', $nom_eta_master, PDO::PARAM_STR);
-$req->execute();
-
-$select_chain='<select id="matiere_prof_modif" type="text" name="matiere_prof_modif">';
-
-while($resultat = $req->fetch()){
-			$select_chain=$select_chain.'<option>'.$resultat['nom_matiere'].'</option>';
-		}
-$select_chain=$select_chain.'</select>';
-
-	$tableau_matiere=tab_option(); 
+	$tableau_matiere=decoupe_bdd_matiere(); 
 	foreach ($tableau_matiere as $element){	
-		echo $select_chain;
+		echo '<select id="matiere_prof_modif" type="text" name="matiere_prof_modif">';
+		$req->execute();
+		while($resultat = $req->fetch()){
+
+			if($element==$resultat['nom_matiere']){
+
+				echo'<option selected>'.$resultat['nom_matiere'].'</option>';
+			} else{
+				echo'<option>'.$resultat['nom_matiere'].'</option>';
+				}
+		}
+		echo '</select>';
 	}
-	
 }
 
 ?>
@@ -50,10 +47,7 @@ $select_chain=$select_chain.'</select>';
 	<input id="mail_prof_modif" type="text" name="mail_prof_modif" placeholder="Mail du professeur" value=<?php echo $modif["mail_prof"]; ?>><br>
 
 	Définir les matières (créer les matières ici) : <br>
-
-
-		<?php option_matiere(); ?>
-
+	<?php insert_option_matiere(); ?>
 
 
 	<select id="classe_prof_modif" type="text" name="classe_prof_modif">
