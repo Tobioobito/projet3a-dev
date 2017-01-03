@@ -27,60 +27,13 @@ gestion prof</div><br />
 
 
 	</div>
-<input id="total_matiere" type="text"><br>
 	Définir les classes (créer les classes ici) : <br>
 
-	<select id="classe_prof1" type="text" name="classe_prof1">
+	<select id="classe_prof" type="text" name="classe_prof">
 	
 <option>école</option>
 <option>école</option>
 <option>école</option>
-
-	</select>
-
-	<select id="classe_prof2" type="text" name="classe_prof2">
-	
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-
-
-	</select>
-
-	<select id="classe_prof3" type="text" name="classe_prof3">
-	
-
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-
-	</select>
-
-	<select id="classe_prof4" type="text" name="classe_prof4">
-	
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-	</select>
-
-	<select id="classe_prof5" type="text" name="classe_prof5">
-	
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
-
-	</select>
-
-	<select id="classe_prof6" type="text" name="classe_prof6">
-	
-<option>école</option>
-<option>école</option>
-<option>école</option>
-
 
 	</select>
 
