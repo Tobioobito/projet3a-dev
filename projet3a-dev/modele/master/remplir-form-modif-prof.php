@@ -61,7 +61,7 @@ function insert_option_matiere(){
 	echo "<div style='display: none ;' id='total_mat'>".$nbr_mat."</div>";
 }
 
-include "../vue/form-modif-prof.php";
+include "../../vue/master/form-modif-prof.php";
 
 
 }

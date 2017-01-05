@@ -1,6 +1,6 @@
 <?php
 
-include "vue/gestion-matiere.php"
+include "vue/master/gestion-matiere.php"
 
 
 ?>

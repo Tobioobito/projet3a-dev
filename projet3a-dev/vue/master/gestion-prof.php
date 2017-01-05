@@ -29,7 +29,17 @@ gestion prof</div><br />
 	</div>
 	Définir les classes (créer les classes ici) : <br>
 
-	<select id="classe_prof" type="text" name="classe_prof">
+
+<input id="bouton_classe_more" type="button" value="+">
+<input id="bouton_classe_less" type="button" value="-">
+	<div id="select_classe">
+
+
+
+
+	</div>
+
+<!--	<select id="classe_prof" type="text" name="classe_prof">
 	
 <option>école</option>
 <option>école</option>
@@ -37,7 +47,7 @@ gestion prof</div><br />
 
 	</select>
 
-
+-->
 	<br>
 
 	<input id="bouton_ajout_prof" type="submit" name="bouton_ajout_prof">
@@ -52,7 +62,7 @@ gestion prof</div><br />
 
 <?php
 
-include "modele/remplir-form-modif-prof.php";
+include "modele/master/remplir-form-modif-prof.php";
 
 ?>
 
@@ -74,10 +84,10 @@ include "modele/remplir-form-modif-prof.php";
 
 
 	<?php 
-	include "modele/affiche-prof.php";
+	include "modele/master/affiche-prof.php";
 	
 	?>
 </table>
 
 <script type="text/javascript" src="ressources/script/jquery.js"></script> 
-<script type="text/javascript" src="controleur/script-gestion-prof.js"></script>
+<script type="text/javascript" src="controleur/master/script-gestion-prof.js"></script>

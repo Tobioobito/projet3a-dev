@@ -53,5 +53,5 @@
 <a href="login.php">Se connecter</a>
 
 <script type="text/javascript" src="ressources/script/jquery.js"></script> 
-<script type="text/javascript" src="controleur/script-inscription.js"></script> 
+<script type="text/javascript" src="controleur/general/script-inscription.js"></script> 
 

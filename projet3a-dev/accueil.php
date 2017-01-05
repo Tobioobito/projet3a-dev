@@ -2,10 +2,11 @@
 
 session_start();
 
+include "controleur/general/cookie.php";
 
 if(isset($_SESSION['id_master'])){
 
-include "vue/accueil.php";
+include "vue/master/accueil.php";
 
 }
 

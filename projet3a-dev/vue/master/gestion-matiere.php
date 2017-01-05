@@ -13,7 +13,7 @@ gestion matières
 	<input id="nom_matiere" type="text" name="nom_matiere" placeholder="Matière"><br>
 
 	<select id="prof_matiere" name="prof_matiere">
-		<?php include "modele/remplir-select-prof.php";?>
+		<?php include "modele/master/remplir-select-prof.php";?>
 	</select><br />
 
 	<select id="classe_matiere" name="classe_matiere">
@@ -36,10 +36,10 @@ gestion matières
 	</tr>
 
 	<?php
-	include "modele/affiche-matiere.php";
+	include "modele/master/affiche-matiere.php";
 	?>
 
 </table>
 
 <script type="text/javascript" src="ressources/script/jquery.js"></script> 
-<script type="text/javascript" src="controleur/script-gestion-matiere.js"></script> 
+<script type="text/javascript" src="controleur/master/script-gestion-matiere.js"></script> 

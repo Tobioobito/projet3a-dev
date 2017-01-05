@@ -113,7 +113,7 @@ $requete->execute();
 <body>
 <div align="center">
 
-Pour Confirmer votre inscription veillez cliquer <a href="http://vaillant.etudiant-eemi.com/projet3a-dev/modele/confirmation-inscription.php?mail='.urlencode($mail_master). '&cle='.$cle_confirm_master. '">ici</a>
+Pour Confirmer votre inscription veillez cliquer <a href="http://vaillant.etudiant-eemi.com/projet3a-dev/modele/general/confirmation-inscription.php?mail='.urlencode($mail_master). '&cle='.$cle_confirm_master. '">ici</a>
 
 <br />
 </div>

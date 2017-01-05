@@ -1,7 +1,7 @@
 <?php
 
 
-include "vue/inscription.php";
+include "vue/general/inscription.php";
 
 
 ?>

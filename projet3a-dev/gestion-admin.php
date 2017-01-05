@@ -5,7 +5,7 @@ session_start();
 
 if(isset($_SESSION['id_master'])){
 
-include "vue/master/gestion-prof.php";
+include "vue/master/gestion-admin.php";
 
 }
 

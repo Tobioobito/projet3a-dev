@@ -9,7 +9,7 @@ if($_GET["inscription"]=="ok"){
 }
 }
 
-include "vue/login.php";
+include "vue/general/login.php";
 
 
 ?>
