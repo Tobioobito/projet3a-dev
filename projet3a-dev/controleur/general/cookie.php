@@ -1,7 +1,7 @@
 <?php
  // connection automatique
 
-
+/*
 
 if(isset($_COOKIE['mail_login'], $_COOKIE['mdp_login']) AND !empty($_COOKIE['mail_login']) AND !empty($_COOKIE['mdp_login'])){
 
@@ -17,5 +17,5 @@ $_SESSION['nom_eta_master'] = $userinfo['nom_eta_master'];
 
 }
 
-}
+}*/
 ?>

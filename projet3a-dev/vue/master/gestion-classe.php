@@ -7,10 +7,12 @@ gestion classes</div><br />
 	<tr>
 		<th>Numéro classe</th>
 		<th>Nombre d'élèves</th>
-		<th>Professeurs</th>
 		<th>Moyenne générale</th>
+		<th>Commentaires</th>
+		<th>Listes des élèves</th>
+		<th>Listes des profs/matières</th>
+		<th>Supprimmer une classe</th>
 		<th>Modifier une classe</th>
-		<th>Supprimer une classe</th>
 	</tr>
 
 </table>
