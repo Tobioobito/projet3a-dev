@@ -1,6 +1,4 @@
 
-<link href="ressources/styles/gestion-eleve.css" rel="stylesheet" type="text/css">
-
 <div>
 
 gestion élève</div><br />
@@ -49,16 +47,14 @@ gestion élève</div><br />
 
 </form>
 
-<form>
-<input type="search" placeholder="Nom de l'élève">
+<form method="POST">
+<input id="nom_recherche_eleve" name="nom_recherche_eleve" type="search" value="ro" placeholder="Nom de l'élève">
 <input type="search" placeholder="Prénom de l'élève">
 <select placeholder="Classe"></select>
-<input type="button" value="recherche">
+<input type="submit" value="recherche">
 </form>
 
-
-
-<table>
+<table id="tableau_eleve">
 
 	<tr>
 		<th>Nom élève</th>
@@ -69,8 +65,16 @@ gestion élève</div><br />
 		<th>Commentaire</th>
 		<th>Voir son bulletin</th>
 		<th>Voir ses retards/absences</th>
-		<th>Supprimer</th>
 		<th>Modifier</th>
+		<th>Supprimer</th>
 	</tr>
 
+	<?php 
+	include "modele/master/affiche-eleve.php";
+	
+	?>
+
 </table>
+
+<script type="text/javascript" src="ressources/script/jquery.js"></script> 
+<script type="text/javascript" src="controleur/master/script-gestion-eleve.js"></script>
