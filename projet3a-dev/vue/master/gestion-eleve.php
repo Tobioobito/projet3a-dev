@@ -42,36 +42,30 @@ gestion élève</div><br />
 
 	<input id="bouton_ajout_eleve" type="submit" name="bouton_ajout_eleve">
 
-
+</div>
 
 
 </form>
 
 <form method="POST">
-<input id="nom_recherche_eleve" name="nom_recherche_eleve" type="search" value="ro" placeholder="Nom de l'élève">
+<input id="nom_recherche_eleve" name="nom_recherche_eleve" type="search" placeholder="Nom de l'élève">
 <input type="search" placeholder="Prénom de l'élève">
-<select placeholder="Classe"></select>
+<select id="classe_recherche_eleve" name="classe_recherche_eleve">
+
+<?php
+include "modele/master/remplir-select-classe.php";
+?>
+
+</select>
 <input type="submit" value="recherche">
 </form>
 
-<table id="tableau_eleve">
 
-	<tr>
-		<th>Nom élève</th>
-		<th>Prénom élève</th>
-		<th>Moyenne</th>
-		<th>Absences</th>
-		<th>Retards</th>
-		<th>Commentaire</th>
-		<th>Voir son bulletin</th>
-		<th>Voir ses retards/absences</th>
-		<th>Modifier</th>
-		<th>Supprimer</th>
-	</tr>
+
+
 
 	<?php 
 	include "modele/master/affiche-eleve.php";
-	
 	?>
 
 </table>

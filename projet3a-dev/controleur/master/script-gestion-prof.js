@@ -90,6 +90,7 @@ return total;
 $("#bouton_ajout_prof").click(function( event ) {
 
 ajout_prof();
+
 return false;
 
 });
