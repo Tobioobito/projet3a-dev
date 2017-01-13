@@ -31,7 +31,7 @@ $req = $connexion->prepare ("UPDATE sl_matiere
 SET prof_matiere = :prof_matiere
 WHERE eta_prof = :eta_prof");
 */
-$req->execute();
+
 
 
 

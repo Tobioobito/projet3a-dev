@@ -8,7 +8,7 @@ $.post("modele/master/affiche-eleve.php", {
                            },
     function(data){
 			
-		
+		$('#nbr_eleve').remove();
 		$('#tableau_eleve').replaceWith(data);
 			//$('#contenu_tableau_eleve').remove();
 
@@ -18,12 +18,19 @@ $.post("modele/master/affiche-eleve.php", {
 }
 
 
-
-
-$('#nom_recherche_eleve').keyup ( function() //saisie
+$('#recherche_eleve').keyup ( function() //saisie
 { 
+	
     recherche_eleve();
-   
+ $('#nbr_eleve_recherche').remove();
+});
+
+
+$('#recherche_eleve').change ( function() //selecteur
+{ 
+	
+    recherche_eleve();
+  $('#nbr_eleve_recherche').remove();
 });
 
 

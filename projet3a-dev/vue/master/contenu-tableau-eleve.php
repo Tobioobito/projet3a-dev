@@ -1,4 +1,6 @@
-<?php echo '<form method="POST">
+<?php 
+
+echo '<form method="POST">
 	  <tr>
 	  <td>'.$resultat['nom_eleve']. '</td> 
 	  <td>'.$resultat['prenom_eleve'].'</td> 

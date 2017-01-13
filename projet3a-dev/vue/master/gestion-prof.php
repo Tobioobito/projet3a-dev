@@ -90,4 +90,5 @@ include "modele/master/remplir-form-modif-prof.php";
 </table>
 
 <script type="text/javascript" src="ressources/script/jquery.js"></script> 
+<script type="text/javascript" src="controleur/master/script-gestion-prof-matiere.js"></script>
 <script type="text/javascript" src="controleur/master/script-gestion-prof.js"></script>

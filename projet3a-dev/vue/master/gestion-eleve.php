@@ -47,9 +47,8 @@ gestion élève</div><br />
 
 </form>
 
-<form method="POST">
+<form method="POST" id="recherche_eleve">
 <input id="nom_recherche_eleve" name="nom_recherche_eleve" type="search" placeholder="Nom de l'élève">
-<input type="search" placeholder="Prénom de l'élève">
 <select id="classe_recherche_eleve" name="classe_recherche_eleve">
 
 <?php
@@ -57,7 +56,7 @@ include "modele/master/remplir-select-classe.php";
 ?>
 
 </select>
-<input type="submit" value="recherche">
+
 </form>
 
 
@@ -65,6 +64,7 @@ include "modele/master/remplir-select-classe.php";
 
 
 	<?php 
+	include "modele/master/compter-eleve.php";
 	include "modele/master/affiche-eleve.php";
 	?>
 

@@ -96,24 +96,27 @@ return false;
 });
 
 
+
+
+
 function ajout_prof(){
-var total_p = total_m();
-var total_pp = total_c();
-//alert(total_p);
-$.post("modele/master/ajout-prof.php", { 
-							mail_prof : $("#mail_prof").val(), 
-                            mdp_prof : $("#mdp_prof").val(), 
-                            nom_prof : $("#nom_prof").val(),
-                            prenom_prof : $("#prenom_prof").val(),
-                            matiere_prof : total_p,
-                            classe_prof : total_pp} ,
-    function(){
+    //Ajout de chaque matiere enseigné par le prof
+    for (i=1; i<nbr_matiere; i++){
+        alert("test");
+        ajout_prof_matiere($("#nom_prof").val(),  $('#matiere_prof'+i).val());
+    }
 
-    		$('#tableau_prof').load(document.URL +  ' #tableau_prof');
+    //Ajout du prof dans la table prof
+    $.post("modele/master/ajout-prof.php", { 
+    							mail_prof : $("#mail_prof").val(), 
+                                mdp_prof : $("#mdp_prof").val(), 
+                                nom_prof : $("#nom_prof").val(),
+                                prenom_prof : $("#prenom_prof").val()
 
-
-
-});
+                                } ,
+        function(){
+        		$('#tableau_prof').load(document.URL +  ' #tableau_prof');
+        });
 
 
 
