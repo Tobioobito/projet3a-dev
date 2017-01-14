@@ -102,7 +102,7 @@ return false;
 function ajout_prof(){
     //Ajout de chaque matiere enseigné par le prof
     for (i=1; i<nbr_matiere; i++){
-        alert("test");
+     
         ajout_prof_matiere($("#nom_prof").val(),  $('#matiere_prof'+i).val());
     }
 
