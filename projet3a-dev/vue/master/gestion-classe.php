@@ -1,5 +1,5 @@
 <div>
-	  <td><a href="" class="bouton_liste_eleve_classe.php">a</a></td>
+	  <td><a href="" class="bouton">a</a></td>
 gestion classes</div><br />
 
 <table>

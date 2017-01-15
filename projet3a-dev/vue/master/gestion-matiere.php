@@ -12,15 +12,7 @@ gestion matières
 
 	<input id="nom_matiere" type="text" name="nom_matiere" placeholder="Matière"><br>
 
-	<select id="prof_matiere" name="prof_matiere">
-		<?php include "modele/master/remplir-select-prof.php";?>
-	</select><br />
 
-	<select id="classe_matiere" name="classe_matiere">
-		<option>
-			Classe
-		</option>
-	</select><br />
 
 	<input type="submit" id="bouton_ajout_matiere" name="bouton_ajout_matiere">
 
@@ -29,9 +21,7 @@ gestion matières
 
 	<tr>
 		<th>Nom matière</th>
-		<th>Professeurs</th>
-		<th>Classe</th>
-		<th>Modifier une matière</th>
+
 		<th>Supprimer une matière</th>
 	</tr>
 

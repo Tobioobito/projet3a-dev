@@ -48,14 +48,28 @@ gestion élève</div><br />
 </form>
 
 <form method="POST" id="recherche_eleve">
+
 <input id="nom_recherche_eleve" name="nom_recherche_eleve" type="search" placeholder="Nom de l'élève">
 <select id="classe_recherche_eleve" name="classe_recherche_eleve">
-
+<option></option>
 <?php
 include "modele/master/remplir-select-classe.php";
 ?>
 
 </select>
+
+
+<?php
+if(isset($_GET["classe"])){
+
+
+
+
+$nom_classe=$_GET["classe"];
+echo $nom_classe;
+
+}
+?>
 
 </form>
 

@@ -139,8 +139,8 @@ function supprime_prof(id_p){
 $.post("modele/master/supprime-prof.php", { 
 
                             id_prof : id_p } ,
-    function(){
-
+    function(data){
+alert(data);
 $('#tableau_prof').load(document.URL +  ' #tableau_prof');    		
 
 });
@@ -151,7 +151,6 @@ $('#tableau_prof').load(document.URL +  ' #tableau_prof');
 $(".bouton_supprime_prof").click(function( event ) {
 
 supprime_prof(this.name);
-
 
 
 });

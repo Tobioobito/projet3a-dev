@@ -2,9 +2,10 @@
 
 function recherche_eleve(){
 
+
 $.post("modele/master/affiche-eleve.php", { 
 							nom_recherche_eleve : $("#nom_recherche_eleve").val(),
-							classe_recherche_eleve : $("#classe_recherche_eleve").val()
+							classe_recherche_eleve : $("#classe_recherche_eleve").val(),
                            },
     function(data){
 			
@@ -15,6 +16,9 @@ $.post("modele/master/affiche-eleve.php", {
     	
 
 });
+
+
+
 }
 
 
@@ -22,7 +26,7 @@ $('#recherche_eleve').keyup ( function() //saisie
 { 
 	
     recherche_eleve();
- $('#nbr_eleve_recherche').remove();
+ 	$('#nbr_eleve_recherche').remove();
 });
 
 
